@@ -169,7 +169,7 @@
   }
   
   .open-details img{
-    display: inline;
+    display: block;
   
     margin-bottom:2rem;
   }
