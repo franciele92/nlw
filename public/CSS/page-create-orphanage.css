@@ -7,17 +7,16 @@ main{
     flex: 1;
   }
 
+.map-container{
+    margin: 0 0 4rem;
+}
 
-form {
+.map-container .leaflet-container{
+    border-radius: 20px 20px 0 0;
 
-    width: 70rem;
-    margin: 6.4rem auto;
-    background: white;
-    border: 1px solid #d3e2e5;
-  
-    border-radius: 2rem;
-  
-    overflow: hidden;
+}
 
-    padding: 8rem;
+.map-container footer{
+    background-color: #f5f8fa;
+    border-radius: 0 0 20px 20px;
 }
