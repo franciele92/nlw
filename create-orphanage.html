@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./public/css/sidebar.css" />
     <link rel="stylesheet" href="./public/css/map.css" />
     <link rel="stylesheet" href="./public/css/form.css" />
+    <link rel="stylesheet" href="./public/css/buttons.css" />
     <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
 
     <link
@@ -75,17 +76,60 @@
 
         <div class="input-block">
           <label for="whatsapp">Número de whatsapp</label>
-          <input id="whatsapp" name="whatsapp">
+          <input id="whatsapp" name="required">
         </div>
 
 
+        <div class="input-block images">
+          <label for="images">Foto</label>
+
+          <div class="images-upload" id="images">
+            <input name="images" placeholder="Cole o link da foto aqui">
+          </div>
+
+          <button type="button">
+            <img src="./public/images/add-file.svg" alt="Nova Imagem">
+          </button>
+         </div>
+         
+
         <fieldset> 
-          <legend> Visitação</legend>
+          <legend> Visitação </legend>
+          <div class="input-block">
+            <label for="instructions">Instruções</label>
+            <textarea id="instructions" name="instructions"></textarea>
+          </div>
+
+          <div class="input-block">
+            <label for="opening_hours">Horário das Visitas</label>
+            <input id="opening_hours" name="opening_hours">
+          </div>
+
+
+          <div class="input-block">
+            <label for="opening_o_weekends">Atende fim de semana?</label>
+            <input 
+            type="hidden" 
+            id="open_on_weekends" 
+            name="opening_on_weekends" 
+            value="1"
+            required>
+
+            <div class="button-select">
+              <button type="button" class="active">Sim</button>
+              <button type="button">Não</button>
+            </div>
+
+
+            <button type="submit" class="primary-button">
+
+           
+            Confirmar
+          </button>
+
+          </div>
           <fieldset>
-
          </form>
-
-        
       </main>
     </div>
     <script src="./public/scripts/page-create-orphanage.js"></script>
