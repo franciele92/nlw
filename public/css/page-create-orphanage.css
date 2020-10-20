@@ -1,6 +1,6 @@
 #page-create-orphanage {
     display: flex;
-    min-height: 100vh;
+    min-width: 100vh;
 }
 
 main{
@@ -17,6 +17,6 @@ main{
 }
 
 .map-container footer{
-    background-color: #f5f8fa;
+    background: #f5f8fa;
     border-radius: 0 0 20px 20px;
 }

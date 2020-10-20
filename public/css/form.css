@@ -51,7 +51,7 @@ fieldset legend {
     line-height: 1.5;
 }
 
-.input-block input, .input,
+.input-block input,
 .input-block textarea {
     width: 100%;
 
@@ -68,26 +68,49 @@ fieldset legend {
 
 }
 
+.input-block input:valid,
+.input-block textarea:valid{
+  border:1px solid #a1e9c5;
+}
+
 .input-block textarea {
-    height: clamp(12 rem, 16rem, 24rem); 
+    height: clamp(12rem, 16rem, 24rem);
     resize: vertical;
     padding: 1.6rem;
-    line-height: 2.8rem
+    line-height: 2.8rem;
 }
 
 
-
-.input block images button {
+.input-block.images button {
     border: 1px dashed #96d2f0;
     width: 100%;
-    background: #f5f8fa
+    background: #f5f8fa;
     height: 6.4rem;
     padding: 0 1.6rem;
     margin-top: 2.4rem;
     border-radius: 2rem;
 
     cursor: pointer;
-
-
 }
 
+.new-upload{
+    position: relative;
+}
+
+.new-upload + .new-upload {
+    margin-top: 2.4rem;
+}
+
+.new-upload span{
+    position: absolute;
+    right: 12px;
+    bottom: 14px;
+    background: #ffffff;
+    border: 1px solid #d3e2e5;
+    box-sizing: border-box;
+    display:flex;
+    border-radius: 10px;
+    padding:.6rem;
+
+    cursor: pointer;
+}
