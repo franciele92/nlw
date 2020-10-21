@@ -46,9 +46,9 @@ function addPhotoField () {
         // verificar se o campo está vazio, se si, nao adicionar ao container de imagens
         const input = newFieldContainer.children [0]
 
-        // if(input.value=="") {
+        if(input.value=="") {
         //   return
-        // }
+         }
 
         // limpar o campo ants de adicionar ao container de imagens
         input.value =""
@@ -70,4 +70,25 @@ function addPhotoField () {
 
         // deletar o campo
        span.parentNode.remove();
+    }
+
+    // select yes or no
+    function toggleSelect(event) {
+        // retirar a class .active (dos botoes)
+        document.querySelectorAll('.button-select button')
+        .forEach( function (button)  { 
+            button.classList.remove('active')})
+    
+        // colocar a class .active nese botao clicado
+        const button = event.currentTarget
+        button.classList.add('active')
+
+    
+        // atualizar o meu input hidden com o valor selecionado
+        const input = document.querySelector ('[name="open_on_weekends"]') 
+        console.log(input)
+
+        input.value = button.dataset.value
+
+
     }
