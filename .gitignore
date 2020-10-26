@@ -1,2 +1,7 @@
-lixo/
-lixo/kk
+node_modules/
+.idea/
+venv/
+venv38/
+*.~sql
+*.log
+database.sqlite
