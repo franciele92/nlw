@@ -19,6 +19,7 @@
   "homepage": "https://github.com/franciele92/nlw#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "hbs": "^4.1.1",
     "nodemon": "^2.0.6"
   }
 }
