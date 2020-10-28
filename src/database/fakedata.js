@@ -18,7 +18,7 @@ module.exports = [
     {
         id: 2,
         lat: "-30.0415789",
-        lng: "-51.1972634",
+        lng: "-51.1862634",
         name: "Lar dos meninos"
         ,description: "Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.",
         images: [
