@@ -1,9 +1,9 @@
-<html lang="pt_BR">
+<html lang="pt_br">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lar das Meninas | Happy</title>
+    <title>{{orphanage.name}} | Happy</title>
 
     <link
       rel="stylesheet"
@@ -34,6 +34,7 @@
     />
   </head>
   <body>
+    {{orphanage.id}}
     <div id="page-orphanage">
       <aside class="animate-right sidebar">
         <img src="/images/map-marker.svg" alt="Happy" />
@@ -47,68 +48,36 @@
 
       <main class="animate-appear with-sidebar">
         <div class="orphanage-details">
-          <img
-            src="/images/home.jpg"
-            alt="Lar das meninas"
-            onclick=""
-          />
+          <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}"/>
 
           <div class="images">
+            {{#each orphanage.images}}
             <button onclick="selectImage(event)" class="active" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=1&v=1"
-                alt="Lar das meninas"
-              />
+              <img src="{{this}}" alt="{{orphanage.name}}"/>
             </button>
+            {{/each}}
 
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=2&v=2"
-                alt="Lar das meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=3&v=3"
-                alt="Lar das meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=4&v=4"
-                alt="Lar das meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=5&v=5"
-                alt="Lar das meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=6&v=6"
-                alt="Lar das meninas"
-              />
-            </button>
           </div>
 
           <div class="orphanage-details-content">
-            <h1>Lar das meninas</h1>
+            <h1>{{orphanage.name}}</h1>
 
             <p>
-              Presta assistência a crianças de 06 a 15 anos que se encontre em
-              situação de risco e/ou vulnerabilidade social.
+              {{orphanage.about}}
             </p>
 
             <div class="map-container">
               <div id="mapid"></div>
+              <span 
+                data-lat="{{orphanage.lat}}"
+                data-lng="{{orphanage.lng}}"></span>
+              
+
               <footer>
-                <a href="">Ver Rotas no Google Maps</a>
+
+                <a
+                target="_blank"
+                 href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=15">Ver Rotas no Google Maps</a>
               </footer>
             </div>
 
