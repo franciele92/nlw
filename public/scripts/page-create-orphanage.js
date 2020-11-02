@@ -89,6 +89,15 @@ function addPhotoField () {
         console.log(input)
 
         input.value = button.dataset.value
+        
+        }
 
+        function validate(event){
 
-    }
+            // validar se lat e lng estao preenchidos
+            const needsLatandLng = false;
+            if(needsLatandLng) {
+            event.preventDefault()
+            alert('Selecione um ponto no mapa')
+            }
+        }
